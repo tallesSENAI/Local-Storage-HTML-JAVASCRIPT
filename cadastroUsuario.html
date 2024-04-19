@@ -1,0 +1,40 @@
+<html>
+<head>
+
+    <title>Cadastro Usuário</title>
+
+</head>
+<body onload=""> <!--ONLOAD para rodar algo assim que a página carregar-->
+    
+    <form onsubmit="return cadastrarUsuario()">
+
+        <input required type="text" placeholder="Nome completo" id="nomeCompletoCadastro"/> <!--PLACEHOLDER: nome que aparece enquanto o usuário 
+                                                        não digita nada no campo de texto-->
+        <br>
+        <input required type="date" placeholder="Data de nascimento" id="dataNascimentoCadastro"/> <!--placeholder não aparece pois a tag "date" 
+                                                        ja possui um placeholder pré-definido-->
+        <br>
+
+        <input required type="email" placeholder="Email" id="emailCadastro"/>
+        <br>
+
+        <input required minlength="3" maxlength="10" type="password" placeholder="Senha" id="senhaCadastro"/>
+        <!--REQUIRED obriga o usuário a preencher o campo para continuar com o cadastro 
+            (serve para todos os tipos de INPUT (text, number, file, email, data, etc...))-->
+        <!--MINLENGTH dá um MÍNIMO de CARACTERES que o campo deve ter para continuar com o cadastro-->
+        <!--MAXLENGTH dá um MÁXIMO de CARACTERES que o campo deve ter para continuar com o cadastro-->
+
+        <!--MIN dá um MÍNIMO de NÚMEROS que o campo deve ter para continuar com o cadastro-->
+        <!--MAX dá um MÁXIMO de NÚMEROS que o campo deve ter para continuar com o cadastro-->
+        <br>
+
+    <button>Cadastrar</button>
+    </form>
+    <!-- "onclick" é uma função, esta função ao ser ativada ira executar a função que esta dentro do "cadastro.JS" -->
+
+    <div id="tabelaCadastro"></div>
+
+    <script src="cadastroJS.js"></script><!--IMPORTAR OS ARQUIVOS JAVASCRIPT SEMPRE NO FINAL DO BODY-->
+
+</body>
+</html>
